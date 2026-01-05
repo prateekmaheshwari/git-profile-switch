@@ -1,0 +1,22 @@
+{
+  "name": "git-profile-switch",
+  "version": "1.0.0",
+  "description": "A safe, one-time CLI tool to set up **profile-based Git identity** (work / personal) on a single machine using Git’s native configuration features.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {},
+  "keywords": [
+    "git",
+    "git-config",
+    "git-profile",
+    "developer-tools",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "author": "Prateek Maheshwari",
+  "license": "ISC"
+}
