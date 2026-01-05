@@ -201,6 +201,58 @@ No other cleanup is required.
 
 ---
 
+## FAQ
+
+### Does this tool switch Git identity dynamically?
+
+No.
+
+This tool configures Git’s native `includeIf` rules once.  
+Git itself handles identity resolution after setup.
+
+The tool does not run during commits.
+
+---
+
+### Can I use this on a company laptop?
+
+Yes.
+
+The tool does not:
+- Run in the background
+- Modify SSH keys
+- Modify GitHub settings
+- Intercept Git commands
+
+It performs a one-time configuration using standard Git features.
+
+---
+
+### Does this affect existing repositories?
+
+Only repositories inside the directories you configure are affected.
+
+All other repositories continue using your existing Git configuration.
+
+---
+
+### Can I use more than two profiles?
+
+Not in v1.
+
+v1 intentionally supports only two profiles (work and personal).  
+Support for additional profiles may be considered later.
+
+---
+
+### Is Windows supported?
+
+Yes, on a best-effort basis.
+
+The tool works anywhere Git and Node.js are available.  
+Some environments (e.g. locked-down corporate Windows machines) may require Git Bash or WSL.
+
+---
 ## License
 
 MIT
