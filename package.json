@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {},
+  "bin": {
+    "git-profile-switch": "./bin/cli.js"
+  },
   "keywords": [
     "git",
     "git-config",
@@ -18,5 +20,8 @@
     "node": ">=16"
   },
   "author": "Prateek Maheshwari",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^14.0.2"
+  }
 }
