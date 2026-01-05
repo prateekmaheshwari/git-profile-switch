@@ -97,6 +97,110 @@ Advanced features may be considered later, but are intentionally out of scope fo
 
 ---
 
+## Installation
+
+This tool is designed to be used via `npx` without permanent installation.
+
+```
+npx git-profile-switch init
+```
+
+You may also install it globally if you prefer:
+```
+npm install -g git-profile-switch
+```
+
+---
+
+## Usage
+
+### Initialize profile-based identity
+
+```
+git-profile-switch init
+```
+
+This command:
+- Prompts for work and personal Git identities
+- Creates profile-specific Git config files
+- Safely updates your global Git configuration using includeIf
+
+You will be shown a preview and must explicitly confirm before any changes are made.
+
+
+### View current configuration
+
+```
+git-profile-switch status
+```
+
+Shows a read-only summary of detected profile-based Git configuration.
+
+
+### Diagnose configuration issues
+
+```
+git-profile-switch doctor
+```
+
+Performs read-only checks and reports potential problems such as:
+- Missing Git installation
+- Missing profile files
+- Missing or invalid includeIf rules
+
+---
+
+## How Identity Switching Works
+
+This tool uses Git’s built-in conditional configuration feature (`includeIf`).
+
+At a high level:
+
+- Repositories under a specific directory (e.g. `~/code/work/`) use a work identity
+- Repositories under another directory (e.g. `~/code/personal/`) use a personal identity
+- Git resolves the correct identity automatically based on repository location
+
+No background processes, hooks, or runtime switching are involved.
+
+---
+
+## Safety & Corporate Use
+
+This tool is designed to be safe to use on company-managed machines.
+
+It:
+- Does not run in the background
+- Does not intercept Git commands
+- Does not modify SSH configuration
+- Does not communicate with GitHub or any external service
+- Does not require continued usage after setup
+
+All changes are local, transparent, and reversible.
+
+You can uninstall the tool after setup and the configuration will continue to work.
+
+---
+
+## Uninstall / Rollback
+
+To undo changes:
+
+1. Restore your backed-up `.gitconfig` file:
+    ```
+    ls ~/.gitconfig.backup.*
+    mv ~/.gitconfig.backup.<timestamp> ~/.gitconfig
+    ```
+
+2. Optionally remove profile files:
+    ```
+    rm ~/.gitconfig-work
+    rm ~/.gitconfig-personal
+    ```
+
+No other cleanup is required.
+
+---
+
 ## License
 
 MIT
