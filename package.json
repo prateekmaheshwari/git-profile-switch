@@ -1,6 +1,6 @@
 {
   "name": "git-profile-switch",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A safe, one-time CLI tool to set up **profile-based Git identity** (work / personal) on a single machine using Git’s native configuration features.",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,13 @@
     "git-profile",
     "developer-tools",
     "cli"
+  ],
+  "files": [
+    "bin",
+    "lib",
+    "templates",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "node": ">=16"
