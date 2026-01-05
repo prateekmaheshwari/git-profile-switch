@@ -3,6 +3,7 @@
 const { Command } = require('commander');
 const { runInit } = require('../lib/init');
 const { runStatus } = require('../lib/status');
+const { runDoctor } = require('../lib/doctor');
 
 
 const program = new Command();
@@ -31,7 +32,7 @@ program
   .command('doctor')
   .description('Verify and diagnose git-profile-switch configuration')
   .action(() => {
-    console.log('doctor: not implemented yet');
+    runDoctor();
   });
 
 /**
