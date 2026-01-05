@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const { Command } = require('commander');
+const { runInit } = require('../lib/init');
+
 
 const program = new Command();
 
@@ -17,8 +19,8 @@ program
 program
   .command('init')
   .description('Initialize profile-based Git identity configuration')
-  .action(() => {
-    console.log('init: not implemented yet');
+  .action(async() => {
+    await runInit();
   });
 
 /**
