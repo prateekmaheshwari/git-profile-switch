@@ -2,6 +2,7 @@
 
 const { Command } = require('commander');
 const { runInit } = require('../lib/init');
+const { runStatus } = require('../lib/status');
 
 
 const program = new Command();
@@ -40,7 +41,7 @@ program
   .command('status')
   .description('Show current profile-based Git configuration status')
   .action(() => {
-    console.log('status: not implemented yet');
+    runStatus();
   });
 
 program.parse(process.argv);
