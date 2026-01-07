@@ -13,8 +13,12 @@
     "git",
     "git-config",
     "git-profile",
+    "git-identity",
+    "git-cli",
     "developer-tools",
-    "cli"
+    "cli",
+    "work-personal",
+    "includeif"
   ],
   "files": [
     "bin",
